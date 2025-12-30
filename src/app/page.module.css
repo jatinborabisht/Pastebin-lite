@@ -1,0 +1,208 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding-top: 2rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #58a6ff 0%, #a371f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+}
+
+.main {
+  flex: 1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.optional {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+  font-weight: 400;
+}
+
+.textarea {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  resize: vertical;
+  min-height: 200px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+}
+
+.textarea::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+.optionsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 500px) {
+  .optionsRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.input {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.15);
+}
+
+.input::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+/* Remove spinner arrows from number inputs */
+.input[type="number"]::-webkit-inner-spin-button,
+.input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.submitButton {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.875rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  background: linear-gradient(135deg, #238636 0%, #2ea043 100%);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  margin-top: 0.5rem;
+}
+
+.submitButton:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(46, 160, 67, 0.3);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.errorMessage {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(248, 81, 73, 0.1);
+  border: 1px solid var(--error);
+  color: var(--error);
+  font-size: 0.9rem;
+}
+
+.successMessage {
+  margin-top: 1.5rem;
+  padding: 1.25rem;
+  border-radius: 8px;
+  background: rgba(63, 185, 80, 0.1);
+  border: 1px solid var(--success);
+  text-align: center;
+}
+
+.successMessage p {
+  color: var(--success);
+  font-weight: 500;
+  margin-bottom: 0.75rem;
+}
+
+.pasteLink {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  padding: 0.5rem 1rem;
+  background: var(--bg-tertiary);
+  border-radius: 6px;
+  color: var(--accent);
+  word-break: break-all;
+  transition: background 0.2s ease;
+}
+
+.pasteLink:hover {
+  background: var(--bg-secondary);
+  color: var(--accent-hover);
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 0;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
